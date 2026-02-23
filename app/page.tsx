@@ -1,16 +1,19 @@
+import { TodoList } from "@/components/todo-list"
+
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center font-sans">
-      <main className="flex w-full max-w-3xl flex-col items-center gap-8 px-6 py-16 text-center sm:items-start sm:text-left">
-        <div className="flex flex-col gap-4">
-          <h1 className="text-4xl font-bold tracking-tight">
-            v0P1
+    <div className="flex min-h-screen justify-center font-sans">
+      <main className="flex w-full max-w-xl flex-col gap-8 px-6 py-16">
+        <header className="flex flex-col gap-1">
+          <h1 className="text-3xl font-bold tracking-tight text-foreground">
+            Tasks
           </h1>
-          <p className="max-w-md text-lg text-muted-foreground">
-            To get started, send a prompt or modify this page directly.
+          <p className="text-sm text-muted-foreground">
+            Organize your day, one task at a time.
           </p>
-        </div>
+        </header>
+        <TodoList />
       </main>
     </div>
-  );
+  )
 }
